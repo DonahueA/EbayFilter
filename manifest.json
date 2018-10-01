@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+
+	"name": "Ebay Post Hider",
+	"description": "Allows you to hide posts from your Ebay searches.",
+	"version" : "1.0",
+
+	"browser_action": {
+		"default_icon": "icon.png"
+	},
+	"web_accessible_resources":[
+		"plus_sign.png",
+		"minus_sign.png"
+	],
+
+	"content_scripts":[
+		{
+			"matches": ["https://www.ebay.com/*"],
+			"js": ["myebayscript.js"],
+			"css": ["test.css"]
+		}
+	],
+
+	"permissions": [
+		"tabs", "storage", "https://www.ebay.com/*"
+	]
+
+}
